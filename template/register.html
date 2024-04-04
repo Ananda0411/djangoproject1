@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="static/stattic/css/bootstrap.min.css">
+    
+</head>
+<body>
+    
+    <script src="static/stattic/js/bootstrap.min.js"></script>
+    <script src="static/stattic/js/popper.js"></script>
+   <!--<div class="container-sm box"></div> -->
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4 mt-5 mx-auto shadow">
+                <h2 class="mb-5 text-center"> userregistration</h2>
+                {% if errormsg %}
+                 <div class="alert alert-danger">
+                    {{errormsg}}
+                 </div>
+                 {% endif %}
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="Input1" class="form-label"><strong>Username</strong></label>
+                        <input type="email" class="form-control" id="Input1" name="uname" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Input2" class="form-label"><strong>password</strong></label>
+                        <input type="password" class="form-control" id="Input2" name="upassword" placeholder="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Input2" class="form-label"><strong> confirmpassword</strong></label>
+                        <input type="password" class="form-control" id="Input3" name="upass" pslaceholder="password">
+                    </div>
+                    <div class="mb-3 text-center">
+                        <button type="submit" class="btn bg-warning">Register</button>
+                        Already user?&nbsp;&nbsp;<a  href="user_login" style="text-decoration:none;">login</a>
+                    </div>
+                    {% if success %}
+                     <div class="alert alert-success">
+                        {{success}}
+                     </div>
+                     {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

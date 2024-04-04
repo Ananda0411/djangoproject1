@@ -1,0 +1,34 @@
+<html>
+    <body> 
+        <h1 align=center> welcome <h1>
+        <form method="POST">
+          {% csrf_token %}
+          <table>
+         <tr>
+            <td>Enter Student Name:</td>
+          <td> <input type="text" name="sname"><br><td>
+          </td>
+          <tr>
+           <td>Enter Roll No:</td>
+         <td> <input type="number" name="rnum"><br></td>
+          </tr>
+          <tr> 
+           <td>Enter Class:<td>
+          <td> <input type="text" name="class"><br></td>
+          </tr>
+          <tr>
+           <td>Enter div:</td>
+          <td> <input type="text" name="div"><br></td>
+          </tr>
+          <tr>
+           <td> Gender:</td>
+          <td><input type="text" name="gen"><br></td>
+          </tr>
+         <tr>
+         <td> <input type="submit" value="send"></td>
+         </tr>
+        </table>
+       </form>
+  </body>
+    
+</html>

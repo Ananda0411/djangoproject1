@@ -1,0 +1,36 @@
+<html>
+    <body> 
+        <h1 align=center> edit message<h1>
+            {% for i in info %}
+        <form method="POST" action="">
+          {% csrf_token %}
+          <table border="1">
+         <tr>
+            <td>Enter Student Name:</td>
+          <td> <input type="text" name="sname" value="{{i.name}}"><br> </td>
+        </tr>
+           <td>Enter Roll No:</td>
+         <td><input type="number" name="rnum" value="{{i.rollno}}"><br></td>
+          </tr>
+          <tr> 
+           <td>Enter Class:</td>
+          <td> <input type="text" name="class" value="{{i.cl}}"><br></td>
+          </tr>
+          <tr>
+           <td>Enter div:</td>
+          <td> <input type="text" name="div" value="{{i.div}}"><br></td>
+          </tr>
+          <tr>
+           <td> Gender:</td>
+          <td><input type="text" name="gen" value="{{i.gender}}"><br></td>
+          </tr>
+         <tr>
+         <td> <input type="submit" value="update"></td>
+         </tr>
+        </table>
+
+       </form>
+       {% endfor %}
+  </body>
+    
+</html>

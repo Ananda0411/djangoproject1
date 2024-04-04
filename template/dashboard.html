@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> Dashboard</title>
+
+    </head>
+    <body>
+        <h2 align="center"> Dashboard </h2>
+        <p><a href="/stud">send back to stud </a></p>
+        <table border="1" align="center">
+            <tr>
+                <th> Sr.no</th>
+                <th> Name:</th>
+                <th>Roll No:</th>
+                <th>class:</th>
+                <th>div</th>
+                <th>Gender</th>
+                <th>Edit:</th>
+                <th>Delete:</th>
+            </tr>
+        {% for i in info %}
+          <tr> 
+           <td>{{forloop.counter}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.rollno}}</td>
+            <td>{{i.cl}}</td>
+            <td>{{i.div}}</td>
+            <td>{{i.gender}}</td>
+            <td><a href="/edit/{{i.id}}">Edit</a></td>
+            <td><a href="/delete/{{i.id}}">Delete</a></td>
+         </tr>
+    
+         {% endfor %}
+    </table>
+    </body>
+</html>

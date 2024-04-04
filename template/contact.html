@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block 'main' %}
+<div class="row">
+    <div class="col-md-12">
+        <h2> Map</h2>
+        <hr>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1910.7523867349812!2d74.23060216840813!3d16.701647262586725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc101e5baf6b5ff%3A0x205f7f0db6447d1a!2sGeeta%20Watch%20Company!5e0!3m2!1sen!2sin!4v1706434203982!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+    <div class="col-md-6 mt-5">
+        <h3><i class="bi bi-building text-danger"></i></h3>
+        Geeta shop<br>
+        Kolhapur,<br>
+        mahrashtra<br>
+        pincode 416206<br>
+      <h6><i class="bi bi-phone">mob 8830175174</i></h6>
+      <p class="bi bi-envelope"> ferojs123@gmail.com</p>
+
+    </div>
+    <div class="col-md-6 mt-5">
+      <h3><i class="bi bi-question-square-fill"></i></h3>
+      <hr>
+      <form method="post" action="">
+        <div class="mb-3">
+          <label for="Input1" class="form-label"><strong>Username</strong></label>
+          <input type="email" class="form-control" id="Input1" name="uname" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+          <label for="Input2" class="form-label"><strong>password</strong></label>
+          <input type="password" class="form-control" id="Input2" name="upassword" placeholder="password">
+      </div>
+      <div class="mb-3">
+          <label for="Input2" class="form-label"><strong> confirmpassword</strong></label>
+          <input type="password" class="form-control" id="Input3" name="upass" pslaceholder="password">
+      </div>
+      <div class="mb-3 text-center">
+          <button type="submit" class="btn bg-warning">submit</button>
+          Already user?&nbsp;&nbsp;<a  href="login.html" style="text-decoration:none;">login</a>
+      </div>
+      </form>
+    </div>
+</div>
+
+{% endblock 'main' %}
